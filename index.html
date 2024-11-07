@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="globals.css">
+</head>
+<body>
+<section id="top" @vue:mounted="init">
+    <h1>{{ label }}</h1>
+    <p>username: {{ username }}</p>
+    <input v-model="input" type="text">
+    <button @click="changeUsername">Change username</button>
+    <element-users pubs="users" subs="six,one" :username="username" class="section"></element-users>
+    <element-admin pubs="admin" class="section"></element-admin>
+</section>
+<script src="main.mjs" type="module"></script>
+</body>
+</html>
